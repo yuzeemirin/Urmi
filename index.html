@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Urmi 🌸</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: "Trebuchet MS", sans-serif;
+    background: linear-gradient(135deg, #fff8fc, #fff0f7, #f8f4ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5d4655;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: min(90%, 520px);
+    padding: 35px 25px;
+    text-align: center;
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    box-shadow: 0 15px 50px rgba(130, 90, 120, 0.15);
+    z-index: 10;
+    animation: appear 0.8s ease;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.question {
+    font-size: 21px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.yes {
+    background: #f5b7d2;
+    color: white;
+    box-shadow: 0 5px 15px rgba(220,120,165,.25);
+}
+
+.no {
+    background: #eee5eb;
+    color: #6b5864;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+.flower {
+    position: absolute;
+    font-size: 30px;
+    animation: float 5s infinite ease-in-out;
+    opacity: .8;
+}
+
+.f1 { top: 8%; left: 8%; }
+.f2 { top: 15%; right: 10%; animation-delay: 1s; }
+.f3 { bottom: 12%; left: 12%; animation-delay: 2s; }
+.f4 { bottom: 8%; right: 8%; animation-delay: 1.5s; }
+.f5 { top: 45%; left: 3%; animation-delay: .5s; }
+.f6 { top: 40%; right: 3%; animation-delay: 2.5s; }
+
+.gif {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    z-index: 4;
+    pointer-events: none;
+    animation: dance 2s infinite ease-in-out;
+}
+
+.gif1 { top: 8%; left: 3%; }
+.gif2 { top: 10%; right: 3%; animation-delay: .4s; }
+.gif3 { bottom: 8%; left: 3%; animation-delay: .8s; }
+.gif4 { bottom: 8%; right: 3%; animation-delay: 1.2s; }
+
+.hidden {
+    display: none;
+}
+
+.final-title {
+    font-size: 35px;
+    color: #d875a4;
+    margin-bottom: 12px;
+}
+
+.final-text {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.flower-rain {
+    position: fixed;
+    top: -50px;
+    z-index: 20;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+}
+
+@keyframes dance {
+    0%,100% {
+        transform: rotate(-8deg) translateY(0);
+    }
+    25% {
+        transform: rotate(8deg) translateY(-12px);
+    }
+    50% {
+        transform: rotate(-8deg) translateY(0);
+    }
+    75% {
+        transform: rotate(8deg) translateY(-8px);
+    }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width:600px) {
+    .gif {
+        width: 65px;
+        height: 65px;
+    }
+
+    .card {
+        padding: 28px 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 11px 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- Flowers -->
+    <div class="flower f1">🌸</div>
+    <div class="flower f2">🌷</div>
+    <div class="flower f3">🌼</div>
+    <div class="flower f4">🌺</div>
+    <div class="flower f5">🌸</div>
+    <div class="flower f6">🌷</div>
+
+    <!-- Dancing GIFs -->
+    <img class="gif gif1"
+    src="Bunny Dancing Oh Yeah Sticker - Bunny Dancing Oh Yeah - ค้นพบและแชร์ GIF.gif">
+
+    <img class="gif gif2"
+    src="Happy Dance GIF - Happy Dance Dance Moves - Discover & Share GIFs.gif">
+
+    <img class="gif gif3"
+    src="Quby乖巧宝宝19.gif">
+
+    <img class="gif gif4"
+    src="b7ad9406-fb27-473b-a659-83373149fc9b.gif">
+
+
+    <!-- Question Card -->
+    <div class="card" id="card">
+
+        <h1>Urmi, I have an important question… 👀</h1>
+
+        <div class="question" id="question">
+            Will you be my bestie? 🌸🫶
+        </div>
+
+        <div class="buttons">
+            <button class="yes" id="yesBtn">
+                Of course, I'd love to 💗
+            </button>
+
+            <button class="no" id="noBtn">
+                Hmm… I don't think so 😭
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- Final Screen -->
+    <div class="card hidden" id="finalCard">
+
+        <div class="final-title">
+            YAYYYYY!! 🌸✨
+        </div>
+
+        <div class="final-text">
+            BESTIE UNLOCKED 🔓🌷<br><br>
+
+            You're officially stuck with me now 😭🫶<br>
+            No refunds. No exchanges. 😌🌸
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Music -->
+<audio id="music" preload="auto">
+    <source src="55NduFO4_vM-d6fd2ed1d146091ab0b932c2a642e663905.mp3"
+            type="audio/mpeg">
+</audio>
+
+
+<script>
+
+const question = document.getElementById("question");
+const yesBtn = document.getElementById("yesBtn");
+const noBtn = document.getElementById("noBtn");
+const card = document.getElementById("card");
+const finalCard = document.getElementById("finalCard");
+const music = document.getElementById("music");
+
+let currentQuestion = 1;
+
+
+/* Questions */
+
+const questions = [
+
+    {
+        text: "Will you be my bestie? 🌸🫶",
+        yes: "Of course, I'd love to 💗",
+        no: "Hmm… I don't think so 😭"
+    },
+
+    {
+        text: "Okay okay… hear me out 😭<br><br>What if I promise to always be there to annoy you?<br>Would you reconsider? 🫶",
+        yes: "Okay, you convinced me 🥹",
+        no: "Still not happening 😭"
+    },
+
+    {
+        text: "Alright, one more chance… 👀<br><br>Can I at least have a tiny spot in your bestie list? 🥺",
+        yes: "Fine, you earned it 💕",
+        no: "Nope, try again 😭"
+    }
+
+];
+
+
+/* NO button */
+
+noBtn.addEventListener("click", function() {
+
+    if (currentQuestion < 3) {
+
+        currentQuestion++;
+
+        const q = questions[currentQuestion - 1];
+
+        question.innerHTML = q.text;
+        yesBtn.innerHTML = q.yes;
+        noBtn.innerHTML = q.no;
+
+        card.style.animation = "none";
+        void card.offsetWidth;
+        card.style.animation = "appear .5s ease";
+
+    } else {
+
+        /*
+        Final question:
+        Instead of ending, make the No button
+        move away playfully.
+        */
+
+        noBtn.style.position = "relative";
+
+        const x = Math.random() * 160 - 80;
+        const y = Math.random() * 100 - 50;
+
+        noBtn.style.transform =
+            `translate(${x}px, ${y}px)`;
+
+        noBtn.innerHTML = "Nice try 😭🌸";
+    }
+
+});
+
+
+/* YES button */
+
+yesBtn.addEventListener("click", accept);
+
+
+/* Acceptance */
+
+function accept() {
+
+    card.classList.add("hidden");
+    finalCard.classList.remove("hidden");
+
+    startFlowers();
+    playMusicSection();
+
+}
+
+
+/* Music: 23 seconds → 37 seconds */
+
+function playMusicSection() {
+
+    music.currentTime = 23;
+
+    music.play().catch(() => {
+        /*
+        Some browsers require a user interaction.
+        Since this function is called from the YES click,
+        playback should normally be allowed.
+        */
+    });
+
+    setTimeout(() => {
+
+        music.pause();
+        music.currentTime = 23;
+
+    }, 14000);
+
+}
+
+
+/* Flower animation */
+
+function startFlowers() {
+
+    const flowers = [
+        "🌸",
+        "🌷",
+        "🌼",
+        "🌺",
+        "🌻",
+        "💮"
+    ];
+
+    for (let i = 0; i < 45; i++) {
+
+        const flower =
+            document.createElement("div");
+
+        flower.className = "flower-rain";
+
+        flower.innerHTML =
+            flowers[Math.floor(Math.random() * flowers.length)];
+
+        flower.style.left =
+            Math.random() * 100 + "vw";
+
+        flower.style.fontSize =
+            (18 + Math.random() * 25) + "px";
+
+        flower.style.animationDuration =
+            (3 + Math.random() * 4) + "s";
+
+        flower.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        document.body.appendChild(flower);
+
+        setTimeout(() => {
+            flower.remove();
+        }, 8000);
+
+    }
+
+}
+
+
+/* Stop music if the website is closed */
+
+window.addEventListener("pagehide", () => {
+
+    music.pause();
+    music.currentTime = 0;
+
+});
+
+window.addEventListener("beforeunload", () => {
+
+    music.pause();
+    music.currentTime = 0;
+
+});
+
+</script>
+
+</body>
+</html>
